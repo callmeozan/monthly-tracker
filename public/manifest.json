@@ -1,25 +1,33 @@
 {
   "short_name": "PEC Admin",
   "name": "PEC Sarakan Dashboard",
+  "description": "Dashboard Administrasi Kas dan Siswa PEC",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F7F4EE",
+  "theme_color": "#1C1A17",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
-      "src": "logo192.png",
+      "src": "/logo512.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#1C1A17",
-  "background_color": "#F7F4EE"
+  "screenshots": [
+    {
+      "src": "/pec1.jpg",
+      "sizes": "1080x1920",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "PEC Sarakan Dashboard Screen"
+    }
+  ]
 }
