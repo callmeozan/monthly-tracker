@@ -574,16 +574,24 @@ export default function App() {
 
       {/* MODAL: INPUT/EDIT REVENUE */}
       {isRevenueModalOpen && isAdmin && (
-        <div className="fixed inset-0 bg-black/60 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in">
-          <div className="bg-white w-full max-w-md rounded-t-[2.5rem] sm:rounded-3xl p-6 shadow-2xl animate-slide-up">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-fade-in">
+          {/* Klik area luar untuk menutup */}
+          <div 
+            className="absolute inset-0" 
+            onClick={() => setIsRevenueModalOpen(false)} 
+          />
+
+          {/* Card Dialog Tengah Membulat Penuh */}
+          <div className="relative w-full max-w-sm bg-white rounded-[2rem] p-6 shadow-2xl animate-slide-up z-10 border border-neutral-100 max-h-[90vh] overflow-y-auto">
             <div className="flex justify-between items-center mb-4">
               <div>
                 <h3 className="font-serif font-bold text-lg text-neutral-900">Manage Monthly Revenue</h3>
                 <p className="text-xs text-neutral-400">Data will automatically overwrite if month exists</p>
               </div>
               <button 
+                type="button"
                 onClick={() => setIsRevenueModalOpen(false)} 
-                className="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-500 hover:text-neutral-900"
+                className="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-500 hover:text-neutral-900 transition"
               >
                 <X size={18} />
               </button>
@@ -620,7 +628,7 @@ export default function App() {
                   placeholder="New enrollments, handbook fees, etc..."
                   value={notesInput} 
                   onChange={(e) => setNotesInput(e.target.value)}
-                  className="w-full mt-1 border border-neutral-200 rounded-xl px-3.5 py-2.5 text-sm bg-neutral-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500/30"
+                  className="w-full mt-1 border border-neutral-200 rounded-xl px-3.5 py-2.5 text-sm bg-neutral-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-500/30 resize-none"
                 />
               </div>
 
